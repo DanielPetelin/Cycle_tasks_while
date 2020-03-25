@@ -19,19 +19,23 @@ while (p <= 10) {
 
 console.log('sum = ' + sum);
 
-// ****
-// ****
-// ****
+// Задача на рисование
 let out = document.querySelector('#out');
 p = 0;
 let outStr = '';
+let flag = 3;
 
 while (p < 4) {
     let p1 = 0;
     while (p1 < 4) {
-        outStr += '*';
+        if (p1 < flag) {
+            outStr += '0';
+        } else {
+            outStr += '*';
+        };
         p1++;
     }
+    flag--
     outStr += '<br>';
     p++;
 }
